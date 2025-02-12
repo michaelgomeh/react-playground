@@ -18,7 +18,8 @@ createRoot(document.getElementById('root')!).render(
 				<Layout>
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/performance" element={<UseMemoExample />} />
+						<Route path="/usememo" element={<UseMemoExample />} />
+						<Route path="/usecallback" element={<UseMemoExample />} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>
