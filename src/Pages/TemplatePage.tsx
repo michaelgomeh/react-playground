@@ -2,7 +2,7 @@ import { CodeHighlight } from '@mantine/code-highlight';
 import { ScrollArea, Stack, Title, Text } from '@mantine/core';
 import React from 'react';
 
-const PerformanceAndOptimizationPage = () => {
+const TemplatePage = () => {
 	return (
 		<ScrollArea>
 			<Stack>
@@ -15,4 +15,4 @@ const PerformanceAndOptimizationPage = () => {
 	);
 };
 
-export default PerformanceAndOptimizationPage;
+export default TemplatePage;

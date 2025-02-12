@@ -46,7 +46,7 @@ export const UseMemoExample = () => {
 	);
 };
 
-const PerformanceAndOptimizationPage = () => {
+const UseMemoPage = () => {
 	return (
 		<ScrollArea>
 			<Stack>
@@ -108,4 +108,4 @@ const ExpensiveComponent = ({ count }) => {
 	);
 };
 
-export default PerformanceAndOptimizationPage;
+export default UseMemoPage;
