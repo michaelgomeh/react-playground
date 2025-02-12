@@ -9,6 +9,7 @@ import {
 import React, { ReactNode } from 'react';
 import { IconBrandReact } from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
+import { Link } from 'react-router';
 
 const Layout = ({ children }: { children: ReactNode }) => {
 	const [opened, { toggle }] = useDisclosure();
@@ -20,10 +21,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
 			padding="md"
 		>
 			<AppShell.Header p={12}>
-				<Group>
+				<Group align="center">
 					<Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
 					<IconBrandReact strokeWidth={1} />
-					React Playground
+					<Link to={'/'}>React Playground</Link>
 				</Group>
 			</AppShell.Header>
 			<AppShell.Navbar>
