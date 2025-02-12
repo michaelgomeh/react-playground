@@ -6,17 +6,21 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Home from './Home';
 import PerformanceAndOptimizationPage from './Pages/Performance';
+import '@mantine/core/styles.css';
+import { MantineProvider } from '@mantine/core';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
-		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route
-					path="/performance"
-					element={<PerformanceAndOptimizationPage />}
-				/>
-			</Routes>
-		</BrowserRouter>
+		<MantineProvider>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route
+						path="/performance"
+						element={<PerformanceAndOptimizationPage />}
+					/>
+				</Routes>
+			</BrowserRouter>
+		</MantineProvider>
 	</StrictMode>
 );
