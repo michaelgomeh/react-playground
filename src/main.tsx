@@ -12,6 +12,7 @@ import Layout from './components/Layout';
 import '@mantine/code-highlight/styles.css';
 import UseCallbackPage from './Pages/UseCallbackPage';
 import ErrorBoundaryPage from './Pages/ErrorBoundaryPage';
+import LazyLoadingPage from './Pages/LazyLoadingPage';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
@@ -19,10 +20,11 @@ createRoot(document.getElementById('root')!).render(
 			<BrowserRouter>
 				<Layout>
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route index element={<Home />} />
 						<Route path="/usememo" element={<UseMemoPage />} />
 						<Route path="/usecallback" element={<UseCallbackPage />} />
 						<Route path="/errorboundary" element={<ErrorBoundaryPage />} />
+						<Route path="/lazy" element={<LazyLoadingPage />} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>
