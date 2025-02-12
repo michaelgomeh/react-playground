@@ -33,6 +33,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 						<NavLink href="/usememo" label="UseMemo Hook" />
 						<NavLink href="/usecallback" label="useCallback Hook" />
 					</NavLink>
+					<NavLink href="/errorboundary" label="ErrorBoundary" />
 				</ScrollArea>
 			</AppShell.Navbar>
 			<AppShellMain>{children}</AppShellMain>

@@ -11,6 +11,7 @@ import { MantineProvider } from '@mantine/core';
 import Layout from './components/Layout';
 import '@mantine/code-highlight/styles.css';
 import UseCallbackPage from './Pages/UseCallbackPage';
+import ErrorBoundaryPage from './Pages/ErrorBoundaryPage';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')!).render(
 						<Route path="/" element={<Home />} />
 						<Route path="/usememo" element={<UseMemoPage />} />
 						<Route path="/usecallback" element={<UseCallbackPage />} />
+						<Route path="/errorboundary" element={<ErrorBoundaryPage />} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>
