@@ -7,7 +7,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 		<AppShell>
 			<AppShell.Header p={12}>
 				<Group>
-					<IconBrandReact />
+					<IconBrandReact strokeWidth={1} />
 					React Playground
 				</Group>
 			</AppShell.Header>
