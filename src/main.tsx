@@ -9,6 +9,7 @@ import PerformanceAndOptimizationPage from './Pages/Performance';
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 import Layout from './components/Layout';
+import '@mantine/code-highlight/styles.css';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
