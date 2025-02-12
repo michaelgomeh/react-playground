@@ -13,6 +13,7 @@ import '@mantine/code-highlight/styles.css';
 import UseCallbackPage from './Pages/UseCallbackPage';
 import ErrorBoundaryPage from './Pages/ErrorBoundaryPage';
 import LazyLoadingPage from './Pages/LazyLoadingPage';
+import WebSocketPage from './Pages/WebsocketPage';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
 						<Route path="/usecallback" element={<UseCallbackPage />} />
 						<Route path="/errorboundary" element={<ErrorBoundaryPage />} />
 						<Route path="/lazy" element={<LazyLoadingPage />} />
+						<Route path="/ws" element={<WebSocketPage />} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>
