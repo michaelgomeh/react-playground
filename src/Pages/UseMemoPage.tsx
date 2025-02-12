@@ -50,8 +50,7 @@ const PerformanceAndOptimizationPage = () => {
 	return (
 		<ScrollArea>
 			<Stack>
-				<Title order={1}>PerformancePage</Title>
-				<Title order={2}>useMemo</Title>
+				<Title order={1}>UseMemo</Title>
 				<Text>
 					Memoizing Computations useMemo is used to optimize expensive
 					calculations by memoizing the result until dependencies change.
