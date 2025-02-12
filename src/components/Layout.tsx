@@ -31,7 +31,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 				<ScrollArea>
 					<NavLink label="Performance And Optimization" opened={true}>
 						<NavLink href="/usememo" label="UseMemo Hook" />
-						<NavLink href="/usecallback" label="UseMemo Hook" />
+						<NavLink href="/usecallback" label="useCallback Hook" />
 					</NavLink>
 				</ScrollArea>
 			</AppShell.Navbar>

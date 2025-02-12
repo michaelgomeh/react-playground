@@ -5,11 +5,12 @@ import './style/index.css';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Home from './Home';
-import UseMemoExample from './Pages/UseMemoPage';
+import UseMemoPage from './Pages/UseMemoPage';
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 import Layout from './components/Layout';
 import '@mantine/code-highlight/styles.css';
+import UseCallbackPage from './Pages/UseCallbackPage';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
@@ -18,8 +19,8 @@ createRoot(document.getElementById('root')!).render(
 				<Layout>
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/usememo" element={<UseMemoExample />} />
-						<Route path="/usecallback" element={<UseMemoExample />} />
+						<Route path="/usememo" element={<UseMemoPage />} />
+						<Route path="/usecallback" element={<UseCallbackPage />} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>
