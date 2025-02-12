@@ -8,19 +8,22 @@ import Home from './Home';
 import PerformanceAndOptimizationPage from './Pages/Performance';
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
+import Layout from './components/Layout';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
 		<MantineProvider>
-			<BrowserRouter>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route
-						path="/performance"
-						element={<PerformanceAndOptimizationPage />}
-					/>
-				</Routes>
-			</BrowserRouter>
+			<Layout>
+				<BrowserRouter>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route
+							path="/performance"
+							element={<PerformanceAndOptimizationPage />}
+						/>
+					</Routes>
+				</BrowserRouter>
+			</Layout>
 		</MantineProvider>
 	</StrictMode>
 );
