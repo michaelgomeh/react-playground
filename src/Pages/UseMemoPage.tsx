@@ -6,7 +6,6 @@ import {
 	Title,
 	Text,
 	Container,
-	rem,
 	ScrollArea,
 } from '@mantine/core';
 import React, { useMemo, useState } from 'react';
@@ -47,12 +46,18 @@ export const UseMemoExample = () => {
 	);
 };
 
-export const GoodUseMemo = () => {
-	return <div>Performance</div>;
-};
-
 const PerformanceAndOptimizationPage = () => {
-	const codeBadMemo = `import { useState } from "react";
+	return (
+		<ScrollArea>
+			<Stack>
+				<Title order={1}>PerformancePage</Title>
+				<Title order={2}>useMemo</Title>
+				<Text>
+					Memoizing Computations useMemo is used to optimize expensive
+					calculations by memoizing the result until dependencies change.
+				</Text>
+				<CodeHighlight
+					code={`import { useState } from "react";
 const ExpensiveComponent = ({ count }) => {
   console.log("Rendering ExpensiveComponent...");
   const computeValue = () => {
@@ -74,9 +79,15 @@ export default function App() {
       <button onClick={() => setToggle(!toggle)}>Toggle</button>
     </div>
   );
-}`;
-
-	const codeGoodMemo = `import { useState, useMemo } from "react";
+}`}
+					language="tsx"
+				/>
+				<Text>
+					Issue: Clicking "Toggle" re-renders ExpensiveComponent, triggering
+					computeValue() again.
+				</Text>
+				<CodeHighlight
+					code={`import { useState, useMemo } from "react";
 const ExpensiveComponent = ({ count }) => {
   const computedValue = useMemo(() => { //add this line
     console.log("Computing...");
@@ -84,23 +95,9 @@ const ExpensiveComponent = ({ count }) => {
   }, [count]); // Only recompute when 'count' changes
 
   return <p>Computed Value: {computedValue}</p>;
-};`;
-
-	return (
-		<ScrollArea>
-			<Stack>
-				<Title order={1}>PerformancePage</Title>
-				<Title order={2}>useMemo</Title>{' '}
-				<Text>
-					Memoizing Computations useMemo is used to optimize expensive
-					calculations by memoizing the result until dependencies change.
-				</Text>
-				<CodeHighlight code={codeBadMemo} language="tsx" />
-				<Text>
-					Issue: Clicking "Toggle" re-renders ExpensiveComponent, triggering
-					computeValue() again.
-				</Text>
-				<CodeHighlight code={codeGoodMemo} language="tsx" />
+};`}
+					language="tsx"
+				/>
 				<Text>Test both examples here:</Text>
 				<UseMemoExample />
 				<Text>

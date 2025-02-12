@@ -5,7 +5,7 @@ import './style/index.css';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Home from './Home';
-import PerformanceAndOptimizationPage from './Pages/Performance';
+import UseMemoExample from './Pages/UseMemoPage';
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 import Layout from './components/Layout';
@@ -18,10 +18,7 @@ createRoot(document.getElementById('root')!).render(
 				<Layout>
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route
-							path="/performance"
-							element={<PerformanceAndOptimizationPage />}
-						/>
+						<Route path="/performance" element={<UseMemoExample />} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>
