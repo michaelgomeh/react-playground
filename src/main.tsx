@@ -13,8 +13,8 @@ import Layout from './components/Layout';
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
 		<MantineProvider>
-			<Layout>
-				<BrowserRouter>
+			<BrowserRouter>
+				<Layout>
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route
@@ -22,8 +22,8 @@ createRoot(document.getElementById('root')!).render(
 							element={<PerformanceAndOptimizationPage />}
 						/>
 					</Routes>
-				</BrowserRouter>
-			</Layout>
+				</Layout>
+			</BrowserRouter>
 		</MantineProvider>
 	</StrictMode>
 );
