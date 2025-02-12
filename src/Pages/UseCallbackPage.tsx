@@ -1,13 +1,5 @@
 import { CodeHighlight } from '@mantine/code-highlight';
-import {
-	ScrollArea,
-	Stack,
-	Title,
-	Text,
-	Input,
-	Button,
-	Group,
-} from '@mantine/core';
+import { ScrollArea, Stack, Title, Text, Input } from '@mantine/core';
 import React from 'react';
 import { useState, useCallback, useEffect } from 'react';
 
