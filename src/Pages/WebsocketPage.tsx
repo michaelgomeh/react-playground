@@ -1,4 +1,3 @@
-import { CodeHighlight } from '@mantine/code-highlight';
 import {
 	ScrollArea,
 	Stack,
