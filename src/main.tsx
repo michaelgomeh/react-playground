@@ -14,6 +14,7 @@ import UseCallbackPage from './Pages/UseCallbackPage';
 import ErrorBoundaryPage from './Pages/ErrorBoundaryPage';
 import LazyLoadingPage from './Pages/LazyLoadingPage';
 import WebSocketPage from './Pages/WebsocketPage';
+import UndoStackPage from './Pages/UndoStackPage';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')!).render(
 						<Route path="/errorboundary" element={<ErrorBoundaryPage />} />
 						<Route path="/lazy" element={<LazyLoadingPage />} />
 						<Route path="/ws" element={<WebSocketPage />} />
+						<Route path="/undostack" element={<UndoStackPage />} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>

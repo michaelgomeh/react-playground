@@ -36,6 +36,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 					<NavLink href="/errorboundary" label="ErrorBoundary" />
 					<NavLink href="/lazy" label="Lazy Loading" />
 					<NavLink href="/ws" label="Websocket" />
+					<NavLink href="/undostack" label="Undo Stack" />
 				</ScrollArea>
 			</AppShell.Navbar>
 			<AppShellMain>{children}</AppShellMain>
